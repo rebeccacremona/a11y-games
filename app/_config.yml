@@ -1,0 +1,18 @@
+# Build settings
+destination: ../build/dev
+keep_files: ["assets"]
+permalink: pretty
+markdown: kramdown
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]
+gems:
+  - jekyll-sitemap
+liquid:
+  error_mode: strict
+
+# Site settings
+title: a11y games
+description: >
+  Challenges to learn web accessibility.
+baseurl: ""
+url: "https://accessibility.games"

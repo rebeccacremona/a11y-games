@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+ <title>a11y games</title>
+
+    
+<meta name="description" content="Challenges to learn web accessibility.">
+
+    <link rel="canonical" href="https://accessibility.games/buttons-and-links/info/">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+
+
+  </head>
+  <body class="info">
+    <header>
+      <span class="logo">accessibility games</span>
+      <nav>
+      
+        <a href="../challenge">challenge</a>
+        <a href="../sample-solution">sample solution</a>
+      
+      </nav>
+    </header>
+    <div class="content">
+      <div class="container">
+  <div class="challenge-title">
+    <h1><span>info</span><br>Buttons and Links</h1>
+  </div>
+  <div class="row">
+    <div class="column">
+      <p>Did you know that buttons and links (anchor tags) are intended for different purposes, and shouldn't be considered interchangeable?</p>
+
+<ul>
+  <li>Links are for navigating to content.</li>
+  <li>Buttons are for everything else. They are for triggering actions.</li>
+</ul>
+
+<h2 id="one-of-these-things-is-not-like-the-other">One of these things is not like the other…</h2>
+
+<p>When navigating a web page by keyboard, people normally use the <strong>spacebar</strong> to press a button. They use <strong>enter/return</strong> to follow a link. Pressing spacebar on a link might accidentally scroll your browser window; pressing enter on a button might accidentally submit a form.</p>
+
+<p>Following a link makes a new entry in your browser's history, changes the address in your URL bar, and navigates the browser to new content  (unless a developer does a lot of work to supress that behavior). Pressing a button doesn't (unless a developer does a lot of work to recreate all that behavior).</p>
+
+<p>Assistive technology, just like search engines, often gives people a list of all the links on a page, so that they can more quickly navigate to the content they are interested in. Meaningless entries for button-triggered actions shouldn't clutter that list; links that are styled to look like buttons shouldn't be absent from that list.</p>
+
+<p>(Plus, if assistive technology can't find your links, chances are search engines can't either. Honoring the button/link distinction improves both your accessibility and your SEO!)</p>
+
+<p>Learn more about links and buttons from web accessibility expert <a href="https://marcysutton.com/links-vs-buttons-in-modern-web-applications/">Marcy Sutton</a> and from <a href="http://www.last-child.com/keyboard-accessibility-with-the-space-bar/">:last-child</a>.</p>
+
+<h2 id="strategy">Strategy</h2>
+
+<p>Whenever you can, simply use <code class="highlighter-rouge">&lt;button type="button"&gt;&lt;/button&gt;</code> if you require a button (or <code class="highlighter-rouge">&lt;button type="submit"&gt;</code> etc.) and <code class="highlighter-rouge">&lt;a href="..."&gt;&lt;/a&gt;</code> if you require a link. They work, right out of the box.</p>
+
+<p>But sometimes your hands are tied. You might not have complete control over your markup. Your design might call for a button that looks like a link, or a link that looks like a button, and you might not be sure how that can be accomplished (at least without a ton of work). You might be obligated by contract, court order, or black magic to restrict yourself to <code class="highlighter-rouge">&lt;span&gt;</code> elements.</p>
+
+<p>If you have to get creative:</p>
+
+<ul>
+  <li>
+    <p>Make sure all anchor tags have non-empty href attributes.</p>
+  </li>
+  <li>
+    <p>Make sure any spans, divs, or other elements that don't normally receive keyboard focus are assigned a tabindex of 0, so they are entered into the tabbing flow in the natural order.</p>
+  </li>
+  <li>
+    <p>Make sure any non-button tags used as buttons have role="button", to increase the likelihood that assistive technology will behave appropriately. (Your mileage may vary, depending on your particular browser and your particular assistive technology.)</p>
+  </li>
+  <li>
+    <p>Use javascript to force the element to behave as expected. Do the expected keys trigger the desired action? Does any unexpected behavior take place? Is anything missing?</p>
+  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+    
+
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{% capture title %}
+  {% if page.title-tag %}
+    {{ page.title-tag | append: " | a11y games" }}
+  {% elsif page.title %}
+    {{ page.title | append: " | a11y games" }}
+  {% else %}
+    {{ site.title }}
+  {% endif %}
+{% endcapture %}
+ <title>{{ title | strip }}</title>

@@ -1,0 +1,19 @@
+version: '2'
+services:
+  jekyll:
+    build:
+      context: .
+      dockerfile: ./build-environment/Dockerfile
+    image: a11y-web:0.1
+    command: bash
+    tty: true
+    volumes:
+        - ./app:/usr/src/a11y-web/app
+        - ./assets:/usr/src/a11y-web/assets
+        - ./build/dev:/usr/src/a11y-web/build/dev
+  server:
+    image: nginx:alpine
+    ports:
+        - "80:80"
+    volumes:
+        - ./build/dev:/usr/share/nginx/html

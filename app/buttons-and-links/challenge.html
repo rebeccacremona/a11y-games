@@ -1,0 +1,105 @@
+---
+layout: challenge
+challenge: Buttons and Links
+custom-css: buttons-and-links
+custom-scripts:
+  - buttons-and-links
+  - toggle-cursor
+---
+<h1 class="sr-only">Challenge:{{ page.challenge }}</h1>
+
+<h2>The lights are out</h2>
+
+<div id="get-candles-wrapper">
+  <p>(lucky this standard html button is accessible by default)</p>
+  <p><button id="get-candles" type="button"> Find some candles</button></p>
+</div>
+
+<!-- N.B Solution steps may be out of order in the source code!  -->
+
+<!-- STEP 2: Fix the links (without swapping out the html tag)! -->
+
+<!-- a. Must be able to navigate to the buttons using tab -->
+<!-- b. Must be able to follow using the enter key (and not the spacebar) -->
+<!-- c. The screen should scroll when you press the spacebar -->
+<!-- d. The window location and your browser history must be updated when you follow the link -->
+<!-- e. Correct aria roles must be used where appropriate -->
+
+<div id="next">
+  <p id="next-landing" tabindex="-1" class="sr-only">The candles are all lit!</p>
+  <p>That's better! What to do next?</p>
+  <ul>
+    <li>
+      <!-- First link to fix!
+
+           Look what css can do.
+      -->
+      <button type="button" class="btn-link link" data-href="/option-1">option 1: coming soon!</button>
+      <!-- end first link -->
+    </li>
+    <li>
+      <!-- Second link to fix! -->
+      <span class="link" data-href="/option-2">option 2: coming soon!</span>
+      <!-- end second link -->
+    </li>
+  </ul>
+  <p>(Oh no.... the links don't work? They aren't accessible, like standard &lt;a&gt; links are by default?)</p>
+</div>
+
+<!-- STEP 1: Fix the buttons (without swapping out the html tag)! -->
+
+<!-- a. Must be able to navigate to the buttons using tab -->
+<!-- b. Must be able to press buttons using the spacebar (primary) and the enter key (secondary) -->
+<!-- c. The screen must not scroll when you press the buttons -->
+<!-- d. The window location bar and browser history must not be altered when you press the buttons -->
+<!-- e. Correct aria roles must be used where appropriate -->
+
+<div id="candles">
+  <p id="candle-landing" tabindex="-1" class="sr-only">a collection of three candles</p>
+  <div class="candle-wrapper">
+    <!-- First button to fix!
+
+         Clever use of css disguises this <a> as a button. But it isn't an accessible button yet.
+
+         Learn more about the distinction between links and buttons at /challenge/buttons-and-links/info.
+    -->
+    <a class="button">Light me!</a>
+    <!-- end first button -->
+    <p class="sr-only candle-lit" tabindex="-1">You lit the first candle!</p>
+    <div class="candle"></div>
+    <div class="wick"></div>
+    <div class="fire"></div>
+    <div class="light"></div>
+  </div>
+  <div class="candle-wrapper">
+    <!-- Second button to fix!
+
+         This span tag in disguise is even worse.
+    -->
+    <span class="button">Click Me!</span>
+    <!-- end second button -->
+    <p class="sr-only candle-lit" tabindex="-1">You lit the second candle!</p>
+    <div class="candle"></div>
+    <div class="wick"></div>
+    <div class="fire"></div>
+    <div class="light"></div>
+  </div>
+  <div class="candle-wrapper">
+    <!-- Third button to fix!
+
+         Somebody is actively trying to make trouble.
+    -->
+    <button class="button" tabindex="-1" role="presentation">Light me!</button>
+    <!-- end third button -->
+    <div class="candle"></div>
+    <div class="wick"></div>
+    <div class="fire"></div>
+    <div class="light"></div>
+  </div>
+</div>
+
+<script>
+  //
+  // WRITE YOUR JAVASCRIPT HERE
+  //
+</script>
