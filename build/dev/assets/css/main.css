@@ -959,5 +959,11 @@ a.info, a.solution {
 .challenge-links {
   margin-top: 35px; }
 
+.caveat {
+  font-size: .8em;
+  margin-top: 45px; }
+  .caveat::before {
+    content: "* "; }
+
 li p {
   display: inline; }

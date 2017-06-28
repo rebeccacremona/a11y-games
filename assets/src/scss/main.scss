@@ -187,6 +187,15 @@ a.info, a.solution {
   margin-top: 35px;
 }
 
+.caveat {
+  font-size: .8em;
+  margin-top: 45px;
+
+  &::before {
+    content: "* ";
+  }
+}
+
 // Lists
 li p {
   display: inline;
