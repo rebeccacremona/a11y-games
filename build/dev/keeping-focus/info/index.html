@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+ <title>a11y games</title>
+
+    
+<meta name="description" content="Challenges to learn web accessibility.">
+
+    <link rel="canonical" href="https://accessibility.games/keeping-focus/info/">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+
+
+  </head>
+  <body class="info">
+    <header>
+      <span class="logo">accessibility games</span>
+      <nav>
+  
+    <a href="../challenge">challenge</a>
+    <a href="../sample-solution">sample solution</a>
+  
+</nav>
+
+    </header>
+    <div class="content">
+      <div class="container">
+  <div class="challenge-title">
+    <h1><span>info</span><br>Keeping (Keyboard) Focus</h1>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h2 id="a-hrefthe-important-part">&lt;a href="#the-important-part"&gt;</h2>
+
+<p>To make a link to a particular element on a web page, you give the element an id, and then append that id to the url, following a <code class="highlighter-rouge">#</code> character. <code class="highlighter-rouge">&lt;a href="#the-important-part"&gt;skip to the important part&lt;/a&gt;</code> looks for an element with <code class="highlighter-rouge">id="the-important-part"</code> on the current page, but you can similarly append a "hash" to any url.</p>
+
+<p>But there's a problem. In some browsers, following a link with a hash scrolls the browser viewport, so the linked-to content appears right at the top of the screen… but keyboard focus doesn't come along for the ride.</p>
+
+<p>This is a big deal.</p>
+
+<p>a) Do you have a long list of Frequently Asked Questions, and want your users to be able to jump straight to the question that interests them?</p>
+
+<p>b) Have you made a "<a href="http://webaim.org/techniques/skipnav/">skip link</a>", to free people navigating with their keyboards or assistive technology (especially those with motor disabilities!) from having to tab through "the long list of navigation links, sub-lists of links, corporate icons, site searches, and other elements" that invariably precede the main content of your page… and to free them from having to repeat that exercise every single time a page on your site loads, refreshes, or runs javascript executed without accessibility in mind (more on that later…)?</p>
+
+<p>c) Or perhaps you have something else in mind. Links straight to the right spot are excellent for UX.</p>
+
+<p>If the browser scrolls the viewport, but doesn't set keyboard focus as well, all those people are out of luck.</p>
+
+<p>Until recently, this was a problem in most every browser. In recent months and years, there have been some improvements! But unfortunately, as of 6/29/17, it sounds like there are still problems with some browsers (IE, Safari on iOS, possibly others…) For some of the sordid history, see</p>
+<ul>
+  <li><a href="https://bugs.webkit.org/show_bug.cgi?id=112181">https://bugs.webkit.org/show_bug.cgi?id=112181</a></li>
+  <li><a href="https://bugs.webkit.org/show_bug.cgi?id=17450">https://bugs.webkit.org/show_bug.cgi?id=17450</a></li>
+  <li><a href="https://bugs.webkit.org/show_bug.cgi?id=116046">https://bugs.webkit.org/show_bug.cgi?id=116046</a></li>
+  <li><a href="https://bugs.webkit.org/show_bug.cgi?id=163719">https://bugs.webkit.org/show_bug.cgi?id=163719</a></li>
+</ul>
+
+<p>The good news: it's almost trivial to write javascript that fixes the problem.</p>
+
+<p>The bad news: it's very difficult to stay up-to-date on which browsers need fixing and which don't.</p>
+
+<p>More good news: you don't necessarily have to. The devs at <a href="https://automattic.com/diversity-and-inclusion/">Automattic</a> include a focus-fixing script in every one of their Wordpress themes: <a href="https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js">https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js</a>. If you find it doesn't work in a particular browser, you can file an issue, or better yet, submit a pull request! Including an up-to-date <code class="highlighter-rouge">skip-link-focus-fix.js</code> in every web project is an excellent start.</p>
+
+
+    </div>
+  </div>
+</div>
+
+    </div>
+    
+
+
+  </body>
+</html>

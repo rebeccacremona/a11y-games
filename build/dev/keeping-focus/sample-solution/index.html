@@ -10,7 +10,7 @@
     
 <meta name="description" content="Challenges to learn web accessibility.">
 
-    <link rel="canonical" href="https://accessibility.games/keeping-focus/challenge/">
+    <link rel="canonical" href="https://accessibility.games/keeping-focus/sample-solution/">
     <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
     <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
@@ -39,7 +39,48 @@
 
   <div class="row">
     <div class="column">
-      
+      <h1 class="sr-only">Sample Solution: Keeping (Keyboard) Focus</h1>
+
+<script>
+  //
+  // WRITE YOUR JAVASCRIPT HERE
+  //
+
+
+  // from https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js
+  /**
+   * File skip-link-focus-fix.js.
+   *
+   * Helps with accessibility for keyboard only users.
+   *
+   * Learn more: https://git.io/vWdr2
+   */
+  ( function() {
+    var isIe = /(trident|msie)/i.test( navigator.userAgent );
+
+    if ( isIe && document.getElementById && window.addEventListener ) {
+      window.addEventListener( 'hashchange', function() {
+        var id = location.hash.substring( 1 ),
+          element;
+
+        if ( ! ( /^[A-z0-9_-]+$/.test( id ) ) ) {
+          return;
+        }
+
+        element = document.getElementById( id );
+
+        if ( element ) {
+          if ( ! ( /^(?:a|select|input|button|textarea)$/i.test( element.tagName ) ) ) {
+            element.tabIndex = -1;
+          }
+
+          element.focus();
+        }
+      }, false );
+    }
+  } )();
+</script>
+
     </div>
   </div>
 </div>
