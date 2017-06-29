@@ -1,6 +1,7 @@
 ---
 layout: info
 challenge: Keeping (Keyboard) Focus
+directory: keeping-focus
 ---
 
 ## &lt;a href="#the-important-part"&gt;

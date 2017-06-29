@@ -1,6 +1,7 @@
 ---
 layout: info
 challenge: Buttons and Links
+directory: buttons-and-links
 ---
 
 Did you know that buttons and links (anchor tags) are intended for different purposes, and shouldn't be considered interchangeable?
