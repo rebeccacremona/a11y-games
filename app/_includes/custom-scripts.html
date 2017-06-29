@@ -1,3 +1,8 @@
+{% if layout.custom-scripts %}
+  {% for file in layout.custom-scripts %}
+    <script src="{{ site.baseurl }}/assets/javascripts/{{ file | strip }}.js"></script>
+  {% endfor %}
+{% endif %}
 {% if page.custom-scripts %}
   {% for file in page.custom-scripts %}
     <script src="{{ site.baseurl }}/assets/javascripts/{{ file | strip }}.js"></script>

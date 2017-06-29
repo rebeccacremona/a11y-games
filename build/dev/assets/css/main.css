@@ -849,9 +849,9 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 1.75em; }
-  body.challenge {
+  body.challenge, body.challenge-landing, body.keyboard-challenge-landing {
     flex-direction: column-reverse; }
-    body.challenge .content {
+    body.challenge .content, body.challenge-landing .content, body.keyboard-challenge-landing .content {
       margin-top: 90px;
       text-align: center; }
   body.landing {

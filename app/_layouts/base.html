@@ -17,15 +17,7 @@
   <body class="{{ page.layout }}">
     <header>
       <span class="logo">accessibility games</span>
-      <nav>
-      {% if page.layout == "challenge" %}
-        <button type="button" id="toggle-cursor" class="btn-link">fix my mouse!</button>
-        <a href="../info">about this challenge</a>
-      {% elsif page.layout == "info" %}
-        <a href="../challenge">challenge</a>
-        <a href="../sample-solution">sample solution</a>
-      {% endif %}
-      </nav>
+      {% include nav.html %}
     </header>
     <div class="content">
       {{ content }}

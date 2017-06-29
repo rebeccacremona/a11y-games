@@ -34,7 +34,9 @@ body {
   flex-direction: column;
   font-size: 1.75em;
 
-  &.challenge {
+  &.challenge,
+  &.challenge-landing,
+  &.keyboard-challenge-landing {
     flex-direction: column-reverse;
 
     .content {

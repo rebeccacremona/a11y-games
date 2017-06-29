@@ -1,0 +1,11 @@
+<nav>
+  {% if layout.nav == "keyboard-challenge" or page.nav == "keyboard-challenge"%}
+    <button type="button" id="toggle-cursor" class="btn-link">fix my mouse!</button>
+    <a href="../info">about this challenge</a>
+  {% elsif layout.nav == "challenge" %}
+    <a href="../info">about this challenge</a>
+  {% elsif layout.nav == "info" %}
+    <a href="../challenge">challenge</a>
+    <a href="../sample-solution">sample solution</a>
+  {% endif %}
+</nav>
