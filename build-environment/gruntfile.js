@@ -90,6 +90,9 @@ module.exports = function (grunt) {
         },{
           src: '<%= globalConfig.assetsSrc %>/scss/buttons-and-links.scss',
           dest: '<%= globalConfig.assetsDist %>/expanded/css/buttons-and-links.css'
+        },{
+          src: '<%= globalConfig.assetsSrc %>/scss/keeping-focus.scss',
+          dest: '<%= globalConfig.assetsDist %>/expanded/css/keeping-focus.css'
         }]
       }
     },
