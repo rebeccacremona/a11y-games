@@ -854,6 +854,7 @@ body {
       margin-top: 90px;
       text-align: center; }
   body.landing {
+    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center; }
