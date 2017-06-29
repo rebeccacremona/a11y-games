@@ -8,7 +8,6 @@ custom-scripts:
 ---
 <h1 class="sr-only">Sample Solution: {{ page.challenge }}</h1>
 
-
 <h2>The lights are out</h2>
 
 <div id="get-candles-wrapper">
@@ -20,10 +19,10 @@ custom-scripts:
 
 <!-- STEP 2: Fix the links (without swapping out the html tag)! -->
 
-<!-- a. Must be able to navigate to the buttons using tab -->
+<!-- a. Must be able to navigate to the links using tab -->
 <!-- b. Must be able to follow using the enter key (and not the spacebar) -->
-<!-- c. The screen must scroll when you press the spacebar -->
-<!-- d. The window location and your browser history must be altered when you press the buttons -->
+<!-- c. The screen should scroll when you press the spacebar -->
+<!-- d. The window location and your browser history must be updated when you follow the link -->
 <!-- e. Correct aria roles must be used where appropriate -->
 
 <div id="next">
@@ -37,11 +36,13 @@ custom-scripts:
       -->
       <!-- <button type="button" class="link" data-href="/option-1">option 1</button> -->
       <button type="button" class="btn-link link" data-href="/option-1" role="link">option 1: coming soon!</button>
+      <!-- end first link -->
     </li>
     <li>
       <!-- Second link to fix! -->
       <!-- <span class="link" data-href="/option-2">option 2</span> -->
       <span class="link" data-href="/option-2" tabindex="0" role="link">option 2: coming soon!</span>
+      <!-- end second link -->
     </li>
   </ul>
   <p>(Oh no.... the links don't work? They aren't accessible, like standard &lt;a&gt; links are by default?)</p>
@@ -65,7 +66,8 @@ custom-scripts:
          Learn more about the distinction between links and buttons at /buttons-and-links/info/.
     -->
     <!-- <a class="button">Light me!</a> -->
-    <a class="button" href="#" role="button">Light candle!</a>
+    <a class="button" href="#" role="button">Light me!</a>
+    <!-- end first button -->
     <p class="sr-only candle-lit" tabindex="-1">You lit the first candle!</p>
     <div class="candle"></div>
     <div class="wick"></div>
@@ -78,7 +80,8 @@ custom-scripts:
          This span tag in disguise is even worse.
     -->
     <!-- <span class="button">Click Me!</span> -->
-    <span class="button" role="button" tabindex="0">Light candle!</span>
+    <span class="button" role="button" tabindex="0">Light me!</span>
+    <!-- end second button -->
     <p class="sr-only candle-lit" tabindex="-1">You lit the second candle!</p>
     <div class="candle"></div>
     <div class="wick"></div>
@@ -91,7 +94,8 @@ custom-scripts:
          Somebody is actively trying to make trouble.
     -->
     <!-- <button class="button" tabindex="-1" role="presentation">Light me!</button> -->
-    <button class="button" type="button">Light candle!</button>
+    <button class="button" type="button">Light me!</button>
+    <!-- end third button -->
     <div class="candle"></div>
     <div class="wick"></div>
     <div class="fire"></div>
