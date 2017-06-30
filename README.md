@@ -32,3 +32,7 @@ Tips and Hints
 Check out the challenge's info page for a more detailed introduction to the accessibility issues it addresses. Each challenge also comes with a sample solution.
 
 For tutorials and code samples, check out the Mozilla Developer Network's [spectacular documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility) on web accessibility.
+
+___
+
+Concept by [@bensteinberg](https://github.com/bensteinberg). Inspired by [warc.games](http://warc.games)
