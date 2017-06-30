@@ -65,7 +65,7 @@ Be extra careful if you are writing fancy styles, such as styles that make links
 
 If you can't figure out where focus is, you can run a little javascript in your browser's dev tools to find out: `document.activeElement`. This can be especially helpful when investigating the behavior of a JS library you are including (...and when writing up "steps to reproduce" in bug reports lol).
 
-If you discover keyboard focus is being dropped at any point, you can fix it with a little more javascript: `document.getElementById('my-element').focus()`. This will work for any element in the document's tab order: buttons, form inputs, anchor tags, and anything that's had it's tabindex set to 0.
+If you discover keyboard focus is being dropped at any point, you can fix it with a little more javascript: `document.getElementById('my-element').focus()`. This will work for any element in the document's tab order: buttons, form inputs, anchor tags, and anything that's had its tabindex set to 0.
 
 You can also set the focus to elements that don't appear in the normal tab order of a document by setting that element's tabindex to -1. That makes the element programmatically focusable, but unreachable during the normal flow.
 
