@@ -3,8 +3,8 @@ Accessibility Games
 
 Coding challenges to learn about web accessibility.
 
-![screenshot of button challenge](https://www.dropbox.com/s/i3axos40v2qlj9i/button-challenge.png?raw=1)
-![screenshot of button challenge code](https://www.dropbox.com/s/aeq1j331soq9tty/fix-the-code.png?raw=1)
+<img alt="screenshot of accessibility games landing page" src="https://www.dropbox.com/s/ndmkuvwgy9on8xu/play.png?raw=1" width="400"><img alt="screenshot of articles about accessible buttons and links" src="https://www.dropbox.com/s/3xkw0kmb2byrh7i/info.png?raw=1" width="400"><img style="display: inline-block; vertical-align: top;" alt="screenshot of button challenge" src="https://www.dropbox.com/s/i3axos40v2qlj9i/button-challenge.png?raw=1" width="400"><img alt="screenshot of button challenge code" src="https://www.dropbox.com/s/aeq1j331soq9tty/fix-the-code.png?raw=1" width="400">
+
 
 Install and Run
 ---------------
