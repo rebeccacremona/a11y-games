@@ -80,7 +80,7 @@
 
 <p>Imagine a table that can be sorted by clicking a button in the sortable column's header. Many libraries completely redraw the table when that occurs, and many don't then reset the focus. Best: set the focus back to the button the user clicked.</p>
 
-<p>Imagine a table that displays data in pages, so that only 10 rows are shown at a time. Probably, the page navigation buttons are beneath the table. So, the user navigates through all the data in the first 10 rows, and then clicks the button to advance to the second set. Many libraries will drop the keyboard focus then, requiring the user to start fresh from the top of the webpage. (And that will happen repeatedly, every time they want to advance to the next set of rows.) Other libraries reset the focus back to the button that was pressed (which, recall, was desireable when we were talking about sorting columns), leaving the user at the bottom of the table, past all the information that was changed. Best: deliver the user somewhere useful, for instance at a caption above the data, and ensure the caption reports which set of rows is being viewed.</p>
+<p>Imagine a table that displays data in pages, so that only 10 rows are shown at a time. Probably, the page navigation buttons are beneath the table. So, the user navigates through all the data in the first 10 rows, and then clicks the button to advance to the second set. Many libraries will drop the keyboard focus then, requiring the user to start fresh from the top of the webpage. (And that will happen repeatedly, every time they want to advance to the next set of rows.) Other libraries reset the focus back to the button that was pressed (which, recall, was desirable when we were talking about sorting columns), leaving the user at the bottom of the table, past all the information that was changed. Best: deliver the user somewhere useful, for instance at a caption above the data, and ensure the caption reports which set of rows is being viewed.</p>
 
 <h3 id="strategy-1">Strategy</h3>
 
@@ -100,7 +100,7 @@
 
 <p>If you can't figure out where focus is, you can run a little javascript in your browser's dev tools to find out: <code class="highlighter-rouge">document.activeElement</code>. This can be especially helpful when investigating the behavior of a JS library you are including (…and when writing up "steps to reproduce" in bug reports lol).</p>
 
-<p>If you discover keyboard focus is being dropped at any point, you can fix it with a little more javascript: <code class="highlighter-rouge">document.getElementById('my-element').focus()</code>. This will work for any element in the document's tab order: buttons, form inputs, anchor tags, and anything that's had it's tabindex set to 0.</p>
+<p>If you discover keyboard focus is being dropped at any point, you can fix it with a little more javascript: <code class="highlighter-rouge">document.getElementById('my-element').focus()</code>. This will work for any element in the document's tab order: buttons, form inputs, anchor tags, and anything that's had its tabindex set to 0.</p>
 
 <p>You can also set the focus to elements that don't appear in the normal tab order of a document by setting that element's tabindex to -1. That makes the element programmatically focusable, but unreachable during the normal flow.</p>
 

@@ -895,8 +895,12 @@ header {
   font-size: .4em;
   color: limegreen; }
 
+.keyboard-challenge-landing h1,
+.challenge-landing h1 {
+  font-family: "Coming Soon", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 h2 {
-  font-family: "Coming Soon", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Coming Soon", "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400; }
 
 h2:not(:first-child) {
