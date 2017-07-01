@@ -56,10 +56,9 @@
 
 <p>Until recently, this was a problem in most every browser. In recent months and years, there have been some improvements! But unfortunately, as of 6/29/17, it sounds like there are still problems with some browsers (IE, Safari on iOS, possibly others…) For some of the sordid history, see</p>
 <ul>
+  <li><a href="http://accessibleculture.org/articles/2010/05/in-page-links/">http://accessibleculture.org/articles/2010/05/in-page-links/</a></li>
   <li><a href="https://bugs.webkit.org/show_bug.cgi?id=112181">https://bugs.webkit.org/show_bug.cgi?id=112181</a></li>
   <li><a href="https://bugs.webkit.org/show_bug.cgi?id=17450">https://bugs.webkit.org/show_bug.cgi?id=17450</a></li>
-  <li><a href="https://bugs.webkit.org/show_bug.cgi?id=116046">https://bugs.webkit.org/show_bug.cgi?id=116046</a></li>
-  <li><a href="https://bugs.webkit.org/show_bug.cgi?id=163719">https://bugs.webkit.org/show_bug.cgi?id=163719</a></li>
 </ul>
 
 <h3 id="strategy">Strategy</h3>
@@ -70,7 +69,7 @@
 
 <p>More good news: you don't necessarily have to. The devs at <a href="https://automattic.com/diversity-and-inclusion/">Automattic</a> include a focus-fixing script in every one of their Wordpress themes: <a href="https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js">https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js</a>. If you find it doesn't work in a particular browser, you can file an issue, or better yet, submit a pull request! Including an up-to-date <code class="highlighter-rouge">skip-link-focus-fix.js</code> in every web project is an excellent start.</p>
 
-<h2 id="write-considerate-javascript">Write Considerate Javascript</h2>
+<h2 id="write-considerate-javascript-part-1">Write Considerate Javascript, part 1</h2>
 
 <p>Whenever you alter the DOM with javascript, consider what its effect will be on keyboard focus.</p>
 

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+ <title>a11y games</title>
+
+    
+<meta name="description" content="Challenges to learn web accessibility.">
+
+    <link rel="canonical" href="https://accessibility.games/captive-audience/info/">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+
+
+  </head>
+  <body class="info">
+    <header>
+      <span class="logo">accessibility games</span>
+      <nav>
+  
+    <a href="/captive-audience/challenge/">challenge</a>
+    <a href="/captive-audience/sample-solution/">sample solution</a>
+  
+</nav>
+
+    </header>
+    <div class="content">
+      <div class="container">
+  <div class="challenge-title">
+    <h1><span>info</span><br>Captive Audience</h1>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h2 id="keyboard-traps-intentional-and-unintentional">Keyboard Traps: intentional and unintentional</h2>
+
+<p>Sometimes, you need to restrict a user's attention (and thus, their keyboard cursor) to a particular section of a web page. For example, <a href="https://webdesign.tutsplus.com/articles/modal-and-modeless-boxes-in-web-design--webdesign-2282">modal windows</a> (pop-ups that take over the window until dismissed, obscuring the content behind them), need to keep keyboard focus within their bounds while open, then return focus to the element that opened them, when the user hits the close button or submits the embedded form, etc.</p>
+
+<p>(Otherwise, people can tab around and press invisible or dimmed elements underneath the modal while it's open: totally confusing and weird. And of course, as we experimented with in the <a href="/keeping-focus/">keeping-focus challenge</a>, whenever you hide/remove an element that had keyboard focus, as we do when we close the modal, focus gets dropped unless reset manually.)</p>
+
+<p>Sometimes, developers trap a user's cursor by accident, making the page (and possibly the entire browser or browser tab) unusable. Search for "keyboard traps" to learn more. A couple links to get you started:</p>
+<ul>
+  <li><a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/focus/keyboard-trap">http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/focus/keyboard-trap</a></li>
+  <li><a href="https://www.nomensa.com/blog/2011/keyboard-traps">https://www.nomensa.com/blog/2011/keyboard-traps</a></li>
+  <li><a href="http://www.interactiveaccessibility.com/education/training/ex7.1.html">http://www.interactiveaccessibility.com/education/training/ex7.1.html</a></li>
+</ul>
+
+<h2 id="write-considerate-javascript-part-2">Write Considerate Javascript, part 2</h2>
+
+<p>Whenever you alter the DOM with javascript, consider what effect it ought to have on keyboard focus (in addition to any effect it actually does have, like <a href="/keeping-focus/">dropping the focus</a>)</p>
+
+<p>Since modal windows, mentioned above, are particularly difficult to get right, we'll play with them. (But of course, the ideas will be the same with any fancy js widget you can dream up).</p>
+
+<p>Smashing Magazine's Scott O'Hara has an <a href="https://www.smashingmagazine.com/2014/09/making-modal-windows-better-for-everyone/">excellent article on accessibility and modal windows</a>. Grab a cup of coffee and head over there to learn why modal windows are hard. (Really. We'll wait.)</p>
+
+<p>Great, you're back? What did you think? A little overwhelming, maybe?</p>
+
+<p>You'll probably want to use a library, rathering than rolling your own modal windows, or other fancy js widgets.</p>
+
+<p>But unfortunately, you can't assume libraries are going to be accessible out of the box. You might need to find or write patches. For instance, PayPal published an <a href="https://github.com/paypal/bootstrap-accessibility-plugin">accessibility plugin for Twitter's Bootstrap 3</a>, along with a web page where you can <a href="http://paypal.github.io/bootstrap-accessibility-plugin/demo.html">explore how Bootstrap 3 components, such as modals, behave with and without the accessiblity plugin</a>.</p>
+
+<p>So you actually do need to know what to look for, what to test, and what javascript to add if your particular js library or framework comes up short.</p>
+
+<p>We'll be playing with some of the basics here:</p>
+<ul>
+  <li>setting the keyboard focus inside the modal on pop up</li>
+  <li>returning the keyboard focus to the button that triggered the modal, when the modal is dismissed</li>
+  <li>dismissing the modal when <code class="highlighter-rouge">escape</code> is pressed</li>
+  <li>preventing users from tabbing to elements outside the modal, while it's open</li>
+  <li>ensuring users can still tab to the browser elements, like the location bar, while the modal is open</li>
+  <li>ensuring the 'close' button is <a href="/coming-challenge">clearly labeled</a> and can be <a href="/buttons-and-links">activated with the keyboard</a></li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+    
+
+
+  </body>
+</html>

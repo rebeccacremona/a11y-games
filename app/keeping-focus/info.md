@@ -21,10 +21,9 @@ c) Or perhaps you have something else in mind. Links straight to the right spot 
 If the browser scrolls the viewport, but doesn't set keyboard focus as well, all those people are out of luck.
 
 Until recently, this was a problem in most every browser. In recent months and years, there have been some improvements! But unfortunately, as of 6/29/17, it sounds like there are still problems with some browsers (IE, Safari on iOS, possibly others...) For some of the sordid history, see
+  - [http://accessibleculture.org/articles/2010/05/in-page-links/](http://accessibleculture.org/articles/2010/05/in-page-links/)
   - [https://bugs.webkit.org/show_bug.cgi?id=112181](https://bugs.webkit.org/show_bug.cgi?id=112181)
   - [https://bugs.webkit.org/show_bug.cgi?id=17450](https://bugs.webkit.org/show_bug.cgi?id=17450)
-  - [https://bugs.webkit.org/show_bug.cgi?id=116046](https://bugs.webkit.org/show_bug.cgi?id=116046)
-  - [https://bugs.webkit.org/show_bug.cgi?id=163719](https://bugs.webkit.org/show_bug.cgi?id=163719)
 
 ### Strategy
 
@@ -35,7 +34,7 @@ The bad news: it's very difficult to stay up-to-date on which browsers need fixi
 More good news: you don't necessarily have to. The devs at [Automattic](https://automattic.com/diversity-and-inclusion/) include a focus-fixing script in every one of their Wordpress themes: [https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js](https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js). If you find it doesn't work in a particular browser, you can file an issue, or better yet, submit a pull request! Including an up-to-date `skip-link-focus-fix.js` in every web project is an excellent start.
 
 
-## Write Considerate Javascript
+## Write Considerate Javascript, part 1
 
 Whenever you alter the DOM with javascript, consider what its effect will be on keyboard focus.
 
