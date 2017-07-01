@@ -38,4 +38,4 @@ We'll be playing with some of the basics here:
 -  dismissing the modal when `escape` is pressed
 -  preventing users from tabbing to elements outside the modal, while it's open
 - ensuring users can still tab to the browser elements, like the location bar, while the modal is open
-- ensuring the 'close' button is [clearly labeled](/coming-challenge) and can be [activated with the keyboard](/buttons-and-links)
+- ensuring the 'close' button is [clearly labeled](/invisible-ink/) and can be [activated with the keyboard](/buttons-and-links/)
