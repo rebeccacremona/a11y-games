@@ -18,13 +18,13 @@ Sometimes, developers trap a user's cursor by accident, making the page (and pos
 
 ## Write Considerate Javascript, part 2
 
-Whenever you alter the DOM with javascript, consider what effect it ought to have on keyboard focus (in addition to any effect it actually does have, like [dropping the focus](/keeping-focus/))
+Whenever you alter the DOM with javascript, consider what effect it ought to have on keyboard focus (in addition to considering whether it may have an effect already incidentally, like [dropping the focus](/keeping-focus/))
 
 Since modal windows, mentioned above, are particularly difficult to get right, we'll play with them. (But of course, the ideas will be the same with any fancy js widget you can dream up).
 
 Smashing Magazine's Scott O'Hara has an [excellent article on accessibility and modal windows](https://www.smashingmagazine.com/2014/09/making-modal-windows-better-for-everyone/). Grab a cup of coffee and head over there to learn why modal windows are hard. (Really. We'll wait.)
 
-Great, you're back? What did you think? A little overwhelming, maybe?
+Great, you're back? What did you think? A little overwhelming, maybe? Yeah. "[Even though they seem pretty innocuous, modals are actually the boss battle at the end of web accessibility](http://robdodson.me/building-better-accessibility-primitives/)".
 
 You'll probably want to use a library, rathering than rolling your own modal windows, or other fancy js widgets.
 
