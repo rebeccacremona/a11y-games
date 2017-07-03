@@ -9,7 +9,7 @@ Messages hidden in plain sight:
 - image alt text
 - sr-only text important for:
   - headings (what page am I on? what section am I in? what section do I want to be in? nav by headings. telephone menu)
-  - icons and form labels
+  - icons and form labels (important for voice command too)
   - context (esp. after javascript events)
   - transcripts and seo
 -  sr-only-focusable important for:
