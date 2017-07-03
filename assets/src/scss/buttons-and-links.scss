@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  color: #aaa;
+  color: #aeaeae;
 }
 
 #get-candles-wrapper {
@@ -8,10 +8,10 @@ body {
 }
 
 #get-candles, .button {
-    color: #aaa;
+    color: #aeaeae;
 
     &:hover, &:focus {
-      color: #333;
+      color: #222
     }
 }
 
@@ -100,7 +100,7 @@ body {
   position: absolute;
   top: 10px;
   left: calc(50%);
-  opacity: 0.50;
+  opacity: 0.40;
   box-shadow: 0 0 200px 150px #ffba24;
   animation: light 0.1s infinite;
 }

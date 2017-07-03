@@ -41,16 +41,44 @@
     <div class="column">
       <h1 class="sr-only">Sample Solution: Keeping (Keyboard) Focus</h1>
 
+<h2>It sounds like it's coming from the basement...</h2>
+
+<button type="button" id="to-the-staircase">We'd better head down there.</button>
+
+<div id="candle-wrapper">
+  <div class="candle"></div>
+  <div class="wick"></div>
+  <div class="fire"></div>
+  <div class="light"></div>
+</div>
+
 <!-- STEP 1: Make a skip link -->
 
-<!-- a. Make a link that skips over the obstacles. Old news: you must be able to navigate to it using tab, and follow it using enter. -->
+<!-- a. Make a link that goes all the way to the bottom of the steps. Old news: you must be able to navigate to it using tab, and follow it using enter. -->
 <!-- b. Confirm that if you press tab again after following the link, you land on the "whew! made it!" element... not on the "fix my mouse" button. If you land on "fix my mouse", your link isn't changing the keyboard focus; it's only scrolling the viewport. (More details in the challenge's info page.) -->
-<!-- c. Confirm that it works in all the browsers you have access to. BONUS: try it out with your devices' built-in screen readers (more on that in a later challenge -->
+<!-- c. Confirm that it works in all the browsers you have access to. BONUS: try it out with your devices' built-in screen readers (more on that in a later challenge). -->
+
+<div id="staircase-wrapper">
+  <div id="staircase">
+    <div id="staircase-top" class="step" tabindex="0">Let's go slowly.</div>
+    <div class="step step-1" tabindex="0">1st step</div>
+    <div class="step step-2" tabindex="0">2nd step</div>
+    <div class="step step-3" tabindex="0">3rd step</div>
+    <div class="step step-4" tabindex="0">4th step</div>
+    <div class="step step-5" tabindex="0">5th step</div>
+    <div class="step step-6" tabindex="0">6th step</div>
+    <div class="step step-7" tabindex="0">7th step</div>
+    <div class="step step-8" tabindex="0">8th step</div>
+  </div>
+  <div class="floor">
+    <div class="bottom" tabindex="0"><span class="sr-only">the bottom of the stairs</span></div>
+  </div>
+</div>
 
 <!-- STEP 2: Stay Focused -->
 
-<!-- a. If your vision allows, fix the styling (the sample soltion) -->
-<!-- b. Find all the places where keyboard focus is dropped and reset to the <body> tag. Hint: there's a total of #.  -->
+<!-- a. If your vision allows, fix the styling so that keyboard focus is visible at all times. Hint: there are two kinds of elements in this design with (intentional...) problems. -->
+<!-- b. Find out when keyboard focus is dropped and reset to the <body> tag. Hint: it happens three separate times.  -->
 <!-- c. Fix them. -->
 
 <script>
@@ -102,8 +130,6 @@
 
   
     <script src="/assets/javascripts/keeping-focus.js"></script>
-  
-    <script src="/assets/javascripts/toggle-cursor.js"></script>
   
 
 
