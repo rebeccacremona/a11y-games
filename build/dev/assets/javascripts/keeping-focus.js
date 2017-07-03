@@ -8,4 +8,34 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.getElementById('staircase-top').focus();
   })
 
+  // Reveal nearby steps
+  function reveal(elem){
+    var prev = elem.previousElementSibling
+    if (prev && prev.previousElementSibling){
+      prev.previousElementSibling.style.visibility = "hidden";
+    }
+    var next = elem.nextElementSibling
+    if (next){
+      next.style.visibility = "visible";
+    }
+  }
+  var steps = document.getElementsByClassName("step");
+  for (var i = 0; i < steps.length; i++) {
+    steps[i].addEventListener('focus', function(){reveal(this)}, false);
+  }
+
+  // Reveal the floor
+  var lastStep = document.getElementsByClassName("step-8")[0];
+  lastStep.addEventListener('focus', function(){
+    document.getElementsByClassName('floor')[0].style.visibility = "visible";
+    document.getElementsByClassName('bottom')[0].style.visibility = "visible";}, false
+  );
+
+  // Hide the stairs
+  var bottom = document.getElementsByClassName('bottom')[0]
+  bottom.addEventListener('focus', function(){
+    document.querySelectorAll(".step").forEach(function(step){step.style.visibility = "hidden";}, false);
+    document.getElementById('staircase').style.visibility = "hidden";}, false
+  );
+
 });

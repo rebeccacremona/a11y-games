@@ -2,11 +2,6 @@ body {
   background-color: black;
   color: #aeaeae; }
 
-#to-the-staircase, .button {
-  color: #aeaeae; }
-  #to-the-staircase:hover, #to-the-staircase:focus, .button:hover, .button:focus {
-    color: #222; }
-
 #candle-wrapper {
   position: relative;
   margin-top: 30px; }
@@ -14,7 +9,7 @@ body {
 #staircase-wrapper {
   display: none;
   margin-top: 80px;
-  margin-left: 65px; }
+  margin-left: 50px; }
 
 #staircase {
   display: inline-block;
@@ -22,15 +17,16 @@ body {
   margin: auto; }
 
 #staircase-top {
+  visibility: visible;
   width: 9em;
   margin-bottom: 7px;
-  margin-left: -65px;
-  text-align: left;
-  text-transform: uppercase; }
+  margin-left: -50px;
+  text-align: left; }
   #staircase-top:focus::before {
     left: 45px; }
 
 .step, .bottom {
+  visibility: hidden;
   width: 5em;
   height: 30px;
   text-align: center;
@@ -79,6 +75,7 @@ body {
   margin-left: 80%; }
 
 .floor {
+  visibility: hidden;
   border-bottom: 1px solid #aeaeae;
   width: 100%; }
 
@@ -158,7 +155,7 @@ body {
   position: absolute;
   top: 10px;
   left: calc(50%);
-  opacity: 0.30;
+  opacity: 0.25;
   box-shadow: 0 0 200px 150px #ffba24;
   animation: light 0.1s infinite; }
 
@@ -170,6 +167,6 @@ body {
 
 @keyframes tiny-light {
   0% {
-    box-shadow: 0 0 10px 10px rgba(255, 186, 36, 0.2); }
+    box-shadow: 0 0 65px 65px rgba(255, 186, 36, 0.2); }
   100% {
-    box-shadow: 0 0 15px 15px rgba(255, 186, 36, 0.2); } }
+    box-shadow: 0 0 75px 75px rgba(255, 186, 36, 0.2); } }
