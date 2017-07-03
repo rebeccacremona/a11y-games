@@ -53,13 +53,13 @@
 
 <h2 id="write-considerate-javascript-part-2">Write Considerate Javascript, part 2</h2>
 
-<p>Whenever you alter the DOM with javascript, consider what effect it ought to have on keyboard focus (in addition to any effect it actually does have, like <a href="/keeping-focus/">dropping the focus</a>)</p>
+<p>Whenever you alter the DOM with javascript, consider what effect it ought to have on keyboard focus (in addition to considering whether it may have an effect already incidentally, like <a href="/keeping-focus/">dropping the focus</a>)</p>
 
 <p>Since modal windows, mentioned above, are particularly difficult to get right, we'll play with them. (But of course, the ideas will be the same with any fancy js widget you can dream up).</p>
 
 <p>Smashing Magazine's Scott O'Hara has an <a href="https://www.smashingmagazine.com/2014/09/making-modal-windows-better-for-everyone/">excellent article on accessibility and modal windows</a>. Grab a cup of coffee and head over there to learn why modal windows are hard. (Really. We'll wait.)</p>
 
-<p>Great, you're back? What did you think? A little overwhelming, maybe?</p>
+<p>Great, you're back? What did you think? A little overwhelming, maybe? Yeah. "<a href="http://robdodson.me/building-better-accessibility-primitives/">Even though they seem pretty innocuous, modals are actually the boss battle at the end of web accessibility</a>".</p>
 
 <p>You'll probably want to use a library, rathering than rolling your own modal windows, or other fancy js widgets.</p>
 
@@ -74,7 +74,7 @@
   <li>dismissing the modal when <code class="highlighter-rouge">escape</code> is pressed</li>
   <li>preventing users from tabbing to elements outside the modal, while it's open</li>
   <li>ensuring users can still tab to the browser elements, like the location bar, while the modal is open</li>
-  <li>ensuring the 'close' button is <a href="/coming-challenge">clearly labeled</a> and can be <a href="/buttons-and-links">activated with the keyboard</a></li>
+  <li>ensuring the 'close' button is <a href="/invisible-ink/">clearly labeled</a> and can be <a href="/buttons-and-links/">activated with the keyboard</a></li>
 </ul>
 
     </div>
