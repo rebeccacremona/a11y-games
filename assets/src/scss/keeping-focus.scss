@@ -20,7 +20,7 @@ body {
   display: none;
   margin-top: 80px;
   // offset the negative margin needed for the landing
-  margin-left: 50px;
+  margin-left: 65px;
 }
 
 #staircase {
@@ -34,7 +34,7 @@ body {
   width: 9em;
   margin-bottom: 7px;
   // negative margin needed so the first step's candle clears this text
-  margin-left: -50px;
+  margin-left: -65px;
   text-align: left;
 
   &:focus::before {
@@ -54,7 +54,7 @@ body {
   }
 
   &:focus::before {
-    content: " ";
+    content: "";
     display: inline-block;
     position: absolute;
     height: 50px;

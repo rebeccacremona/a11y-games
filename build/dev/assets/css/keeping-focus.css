@@ -9,7 +9,7 @@ body {
 #staircase-wrapper {
   display: none;
   margin-top: 80px;
-  margin-left: 50px; }
+  margin-left: 65px; }
 
 #staircase {
   display: inline-block;
@@ -20,7 +20,7 @@ body {
   visibility: visible;
   width: 9em;
   margin-bottom: 7px;
-  margin-left: -50px;
+  margin-left: -65px;
   text-align: left; }
   #staircase-top:focus::before {
     left: 45px; }
@@ -34,7 +34,7 @@ body {
   .step:focus, .bottom:focus {
     outline: none; }
   .step:focus::before, .bottom:focus::before {
-    content: " ";
+    content: "";
     display: inline-block;
     position: absolute;
     height: 50px;
